@@ -1,11 +1,11 @@
 import React from 'react';
 
-const PostAddForm =()=>{
+const PostAddForm =({onAdd})=>{
     return(
-        <form className="buttom-panel d-flex">
+        <div className="buttom-panel d-flex">
             <input type="text" placeholder="What are you thinking about?" className="form-control new-post-label me-2"/>
-            <button type="submit" className="btn btn-outline-secondary">Add</button>
-        </form>
+            <button type="submit" className="btn btn-outline-secondary" onClick={()=> onAdd('hello')}>Add</button>
+        </div>
     )
 }
 
